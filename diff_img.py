@@ -1,7 +1,9 @@
 import cv2
 from matplotlib import pyplot as plt
 
-small = cv2.imread('subset.png', 0)
+# small = cv2.imread('subset.png', 0)
+small = cv2.imread('subset.png')
+small = cv2.cvtColor(small, cv2.COLOR_RGB2GRAY)
 big = cv2.imread('test.jpg', 0)
 big2 = big.copy()
 w, h = small.shape[::-1]
